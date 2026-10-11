@@ -81,12 +81,7 @@ Based on the economic attribution, a rotated portfolio is constructed by combini
 ## Requirements
 
 ```bash
-pip install numpy pandas matplotlib seaborn plotly yfinance fmfinance quantstats \
-            statsmodels scipy scikit-learn pypfopt openpyxl xlrd
-```
-
-```bash
-pip install https://github.com/FraMedda/fmfinance/archive/refs/heads/main.zip
+pip install -r requirements.txt
 ```
 
 Python 3.9+ recommended. Run in Jupyter Notebook or JupyterLab.
