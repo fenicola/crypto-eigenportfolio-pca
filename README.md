@@ -60,6 +60,9 @@ Notable finding: Cluster 1 (composed entirely of gold-backed tokens: PAXG and XA
 ### 7. Covariance Matrix Denoising (Marchenko-Pastur)
 The sample covariance matrix is denoised using **Random Matrix Theory**. Eigenvalues below the Marchenko-Pastur upper bound (λ_max = (1 + 1/√q)², where q = T/N) are treated as noise and replaced with their average. The denoised covariance matrix is reconstructed as Q × Λ_denoised × Qᵀ, rescaled to original asset variances. The Efficient Frontier and tangency portfolio are recomputed on the denoised matrix and compared to the sample version in terms of weight concentration, frontier shape, and OOS performance.
 
+![Efficient frontier with the sample vs Marchenko–Pastur denoised covariance matrix.](images/efficient_frontier_denoised.png)
+*Efficient frontier with the sample vs Marchenko–Pastur denoised covariance matrix.*
+
 ### 8. Economic Attribution of Principal Components
 The PCA scores (time series of each component) are regressed on a set of external factors via OLS:
 
@@ -75,6 +78,9 @@ A **loading-factor attribution table** is produced to map each principal compone
 
 ### 9. Portfolio Rotation
 Based on the economic attribution, a rotated portfolio is constructed by combining eigen-portfolios in proportion to their BTC beta exposure, with a hedge against the geopolitical risk factor. OOS performance is compared to EP0 and the BTC benchmark.
+
+![Out-of-sample cumulative log-returns (June 2024 – June 2025): rotated portfolio vs first eigen-portfolio (EP0) vs Bitcoin.](images/rotated_portfolio_oos.png)
+*Out-of-sample cumulative log-returns (June 2024 – June 2025): rotated portfolio vs first eigen-portfolio (EP0) vs Bitcoin.*
 
 ---
 
